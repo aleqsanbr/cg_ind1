@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indiv #1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="workspace">
+    <div class="sidebar">
+        <button id="finishPolygon">Завершить полигон (Enter)</button>
+        <button id="clearAll" class="danger">Очистить сцену</button>
+
+        <div class="mode-section">
+            <p><b>Включить режим:</b></p>
+            <button id="modeCreate" class="mode-btn active">Создание</button>
+            <button id="modePolygonIntersection" class="mode-btn">Пересечение полигонов</button>
+        </div>
+
+        <div id="resultPanel" class="result-panel">
+            <strong>Информация</strong>
+            <div id="resultText"></div>
+        </div>
+
+        <div class="polygon-list">
+            <strong>Полигоны</strong>
+            <p>Текущий полигон: <span id="currentPoints">0</span> вершин</p>
+            <div id="polygons"></div>
+        </div>
+    </div>
+
+    <canvas id="canvas" width="1400" height="800"></canvas>
+</div>
+
+<script src="js/geometry.js"></script>
+<script src="js/drawing.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
